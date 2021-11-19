@@ -68,7 +68,7 @@ WSGI_APPLICATION = 'djangoProjectcorte3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'formlabs',
+        'NAME': 'formlab',
         'USER': 'postgres',
         'PASSWORD': 'felipeandres2103',
         'HOST': 'localhost',
