@@ -1,0 +1,193 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="../../icons/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Serif+Pro&family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&family=Source+Sans+Pro:wght@600&family=Source+Serif+Pro&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&family=Source+Sans+Pro:wght@600&family=Source+Serif+Pro&family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&family=Source+Sans+Pro:wght@600&family=Source+Serif+Pro&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+Pro:wght@600&family=Source+Serif+Pro&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="borde">
+    <ul class="borde">
+        <li class="bordes">formlabs</li>
+        <li class="bordes">3D Printers</li>
+        <li class="bordes" >Materials</li>
+        <li class="bordes">Software</li>
+        <li class="bordes">Services</li>
+        <li class="bordes">Industries</li>
+        <li class="bordes">Learn</li>
+        <li class="bordes">Support</li>
+        <li><i class="fas fa-search"></i></li>
+        <li ><i class="fas fa-flag-usa"></i></li>
+        <li  ><i class="fas fa-user-alt"></i></li>
+        <li ><i class="fas fa-shopping-cart"></i></li>
+        <li><a  class="bordes am" href="#store">Store</a></li>
+
+    </ul>
+
+</nav>
+</header>
+<main>
+
+      <div class="imagen">
+ <div class="text-intro">
+        <h1 class="nueva">High Performance 3D Printers, <br> Finally Within Reach</h1>
+         <h4 class="origen">Scale prototyping and production with affordable, industrial-quality SLA and SLS <br> 3D printers</h4>
+
+     <input type="submit" value="Browse 3D Printers" class="but back">
+       <input type="submit" value="Request a Free Sample Part" class="but back1">
+ </div>
+    </div>
+
+
+    <section class="seccion">
+<article class="artic">
+    <div class="di">
+    <i class="fas fa-tooth logo">
+    <h2>Dental</h2>
+   </i>
+    </div>
+    <div class="di">
+        <i class="far fa-building logo">
+        <h2>Engineering</h2>
+    </i>
+    </div>
+
+    <div class="di">
+        <i class="fas fa-box-open logo">
+        <h2>Manufacturing</h2>
+            </i>
+    </div>
+
+    <div class="di"><i class="fas fa-user-graduate logo">
+     <h2>Education</h2>
+    </i></div>
+    <div class="di"><i class="fas fa-briefcase-medical logo ">
+       <h2>Medical</h2>
+    </i>
+    </div>
+    <div class="di">
+        <i class="far fa-play-circle logo ">
+        <h2>Enternaiment</h2></i></div>
+
+    <div class="di">
+        <i class="fas fa-gem logo">
+        <h2>Jewerly</h2>
+        </i>
+    </div>
+
+    <div class="di"> <i class="fas fa-volume-up logo">
+        <h2>Audio</h2>
+    </i>
+    </div>
+</article>
+        </section>
+<section class="fon">
+
+ <div class="fon1">
+        <h1>Find the Right Material for <br>Your Application:</h1>
+     <p >Our interactive material wizard helps you make the right <br>
+         decisions based on your application and the properties you care <br>
+         the most about from our growing library of materials.</p>
+     <input type="submit" value="Recommend Me a Material" class="butt">
+   </div>
+<div class="fon2">
+    <img  class="photo" src="../../../media/fon2.png" >
+       </div>
+</section>
+</main>
+<main>
+
+<section class="parte flex-reverse">
+
+ <div class="parte2">
+     <h2> INTERACTIVE</h2>
+     <h2>Calculate Your Time and Cost Savings</h2>
+      <p>Try our interactive ROI tool to see <br> how much time and cost you can  save when 3D printing <br> on Formlabs 3D printers.</p>
+     <input type="submit" value="Calculate Your Savings" class="butt3">
+   </div>
+<div class="parteimg">
+    <img  class="photo" src="../../../media/porfi.jpg" width="450" >
+       </div>
+</section>
+
+</main>
+
+<article class="modal" id="store" >
+    <div class="modal-content">
+        <a href="#close" class="modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"/>
+            </svg>
+        </a>
+       <article class="portfolio-modal">
+ <form action="{% url 'cliente_form:save_client' %}" method="post" enctype="multipart/form-data">
+           <div class="portfolio-info">
+
+              {% csrf_token %}
+               <h3>Contacto para ventas </h3>
+               <aside class="portfolio-details">
+                     <small class="b">Nombre:
+                         <br>
+
+               <input  class="inpu" type="text" size="50">
+                         </small>
+                    <small class="b">Apellido:
+
+                        <br>
+               <input  class="inpu" type="text" size="50" height="2rem">
+                        </small>
+                    <small class="b">Correo electronico:
+                        <br>
+
+               <input  class="inpu" type="text" size="50">
+                        </small>
+                    <small class="b">Telefono:
+                        <br>
+               <input class="inpu" type="text" >
+                        </small>
+                    <small class="b">Industria:
+                        <br>
+               <input  class="inpu" type="text" size="50">
+                        </small>
+                    <small class="b">Empresa:
+                        <br>
+               <input  class="inpu" type="text" size="50">
+                   </small>
+                    <small class="b">Trabajo:
+                        <br>
+               <input  class="inpu" type="text" size="50">
+                    </small>
+             </aside>
+
+             <button  type="submit"> Save character</button>
+
+
+         </div>
+      </form>
+       </article>
+</div>
+</article>
+<footer>
+     <nav class="image">
+    <ul  class="images">
+<p class="pow">Powering Design and Production At:</p>
+        <li class="log"><img src="../../../media/google.png" alt=""></li>
+        <li class="log"><img src="../../../media/sony.png" alt=""></li>
+        <li class="log"><img src="../../../media/newbalance.png"></li>
+        <li class="log"><img src="../../../media/ford.png" alt=""></li>
+        <li class="log"><img src="../../../media/gillete.png" alt=""></li>
+        <li class="log"><img src="../../../media/harvard.png" alt=""></li>
+    </ul>
+    </nav>
+    </footer>
+</body>
+</html>
